@@ -1,5 +1,5 @@
 Gigaimpacts
 ===========
-gigaimpactscorp single page site based on bootstrap. Not really a front end guy, not really a front end guy, tryin to keep bootstrap simple and minmal.        
+Single page site based on bootstrap.js 
 
 Initial commit 
