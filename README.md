@@ -1,5 +1,4 @@
 Gigaimpacts
 ===========
-Single page site based on bootstrap.js 
+Single page web site based on bootstrap.js for a friends clean energy newco. 
 
-Initial commit 
