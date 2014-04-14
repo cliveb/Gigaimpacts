@@ -1,0 +1,21 @@
+@import url("bootstrap.min.css");
+@import url("bootstrap-theme.css");
+
+  
+.jumbotron{
+	margin-top: 40px;
+	background: url("../images/windfarm.png") bottom center no-repeat;
+	background-size: cover;
+	color: #FFFFFF;
+}
+
+.jumbotron h1{
+	color: #FFFFFF;
+	text-shadow: 0px 0px 5px #888888;
+}
+
+footer{
+	border-top: 1px dashed #CCCCCC;
+	padding: 10px 0px;
+	border-bottom: 1px dashed #CCCCCC;
+}
