@@ -106,12 +106,6 @@
         </div>
         <p></p>
 
- <!-- Separator
- =================================================
-
-        
-        <hr class="half-rule"> -->
-
   <!-- Footer
 ================================================== -->
         <footer>
@@ -121,7 +115,7 @@
             <div class="col-md-4">&copy; 2014. All Rights Reserved</div>
             <div class="col-md-4">
               <ul class="nav navitem">
-                <a href="https://www.indiegogo.com/project/preview/6f3ede67/">About Us</a> | <a href="http://www.twitter.com/XClimateChange/">Twitter</a> | <a href="#">Privacy Policy</a>
+                <ul class="active"><a href="https://indiegogo.com/project/preview/6f3ede67/">About Us</a> | <a href="http://twitter.com/XClimateChange/">Twitter</a> | <a href="#">Privacy Policy</a>
               </ul>
             </div>
             <div class="col-md-4">
@@ -130,9 +124,16 @@
           </div>
         </footer>
 
-  <!-- Analytics
+  <!-- Google Analytics
 ================================================== -->
-         <!-- add Google analytics here -->
+<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+         mathiasbynens.be/notes/async-analytics-snippet -->
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
 ================================================== -->
