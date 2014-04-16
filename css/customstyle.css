@@ -18,15 +18,15 @@
 Reference: http://avexdesigns.com/responsive-youtube-embed/
 */
 
-.vid {
+.video-container {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
 }
  
-.vid iframe,
-.vid object,
-.vid embed {
+.video-container iframe,
+.video-container object,
+.video-container embed {
 	border:none; 
     position: absolute;
     top: 0;
