@@ -15,8 +15,8 @@
 }
 
 /*
-Reference: http://avexdesigns.com/responsive-youtube-embed/
-*/
+Reference: https://gist.github.com/10851532.git
+
 
 .video-container {
     position: relative;
@@ -35,8 +35,11 @@ Reference: http://avexdesigns.com/responsive-youtube-embed/
     height: 100%;
 }
 
+
 footer{
 	border-top: 1px dashed #CCCCCC;
 	margin: 20px 0px;
 	padding: 20px 0px;
 }
+
+*/
