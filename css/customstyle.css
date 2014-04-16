@@ -27,6 +27,7 @@ Reference: http://avexdesigns.com/responsive-youtube-embed/
 .vid iframe,
 .vid object,
 .vid embed {
+	border:none; 
     position: absolute;
     top: 0;
     left: 0;
