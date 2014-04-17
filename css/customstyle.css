@@ -4,8 +4,8 @@
   
 .jumbotron{
 	margin-top: 40px;
-	background: url("../images/windfarm.png") bottom center no-repeat;
-	/* background-image: url("../images/windturbines.gif") bottom center no-repeat; */
+	/* background: url("../images/windfarm.png") bottom center no-repeat; */
+	background: url("../images/windturbines.gif") bottom center no-repeat;
 	background-size: cover;
 	color: #FFFFFF;
 }
