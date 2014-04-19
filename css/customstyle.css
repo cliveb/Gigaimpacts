@@ -16,6 +16,53 @@
 }
 
 /*
+Reference: view-source:http://bost.ocks.org/mike/sankey/
+*/
+
+#chart {
+  height: 500px;
+}
+
+.node rect {
+  cursor: move;
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+
+.node text {
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+.link:hover {
+  stroke-opacity: .5;
+}
+
+
+
+/* Sidebar modules for boxing sankey help content */
+.sidebar-module {
+  padding: 10px;
+  margin: 0 -10px 10px;
+}
+.sidebar-module-inset {
+  padding: 5px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+/*
 Reference: https://gist.github.com/10851532.git
 */
 

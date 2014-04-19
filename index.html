@@ -76,26 +76,26 @@
         </div>
         </div>
 
-  <!-- 12 box
+  <!-- 12 box hero grid
 =================================================== -->
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="http://tamc.github.io/Sankey/" ><img class="img-responsive img-circle" src="images/planetearth.png" alt=""></a>
+              <a href="#" ><img class="img-responsive img-circle" src="images/planetearth.png" alt=""></a>
               <h3 class="text-center">Climate Change</h3>
               <p>Giga Impacts brings a systems view of the world to educate about climate change - the causes - the impacts - what you can do to make a difference...</p>
               <a href="http://www.climate.gov/" class="btn btn-danger">Learn More &raquo;</a>
               <p></p>
             </div>
             <div class="col-md-4">
-              <a href="http://tamc.github.io/Sankey/"><img class="img-responsive img-circle" src="images/windsolar.png" alt=""></a>
+              <a href="#"><img class="img-responsive img-circle" src="images/windsolar.png" alt=""></a>
               <h3 class="text-center">Our Main Goal</h3>
               <p>Giga Impacts is here to inform you with a whole-systems approach to understand Climate Change and the everyday actions we all can take to help. We can all work together to meet the the needs of a changing world. Please get informed to take action today...</p>
               <a href="http://www.un.org/climatechange/" class="btn btn-success">Learn More &raquo;</a>
               <p></p>
             </div>
             <div class="col-md-4">
-              <a href="http://tamc.github.io/Sankey/"><img class="img-responsive img-circle" src="images/lightbulb.png" alt=""></a>
+              <a href="#"><img class="img-responsive img-circle" src="images/lightbulb.png" alt=""></a>
               <h3 class="text-center">Take Action Today</h3>
               <p>Be part of the solution. Learn about how renewable energy can make a difference in your business. With renewable energy credits your electricity use goes green today...</p>
               <a href="https://docs.google.com/forms/d/1_5JUF4kf7D2HoMhNm7GbFDGiP-qtqi5zdid3D-W7NoI/edit" target="_blank" class="btn btn-info">Learn More &raquo;</a>
@@ -104,6 +104,27 @@
           </div>
         </div>
         <p></p>
+
+  <!-- Climate Change Navigator
+=================================================== -->        
+
+<div class="container">
+    <div class="row">
+        <hr>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+      <h4>Climate Change Navigator</h4>
+    </div>
+        <div class="col-md-8">
+            <p id="chart"> 
+            </div>
+            <div class="col-md-2 col-md-offset-8"> 
+          <div class="sidebar-module sidebar-module-inset">Drag to rearrange nodes</div> 
+  </div>
+</div>
 
   <!-- Reference: logobulb
 =================================================== -->
@@ -178,5 +199,89 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+        
+  <!-- Sankey necessary for chart 
+================================================== -->
+
+    <script src="http://d3js.org/d3.v2.min.js?2.9.1"></script>
+    <script src="js/sankey.js"></script>
+<script>
+
+var margin = {top: 1, right: 1, bottom: 6, left: 1},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var formatNumber = d3.format(",.0f"),
+    format = function(d) { return formatNumber(d) + " TWh"; },
+    color = d3.scale.category20();
+
+var svg = d3.select("#chart").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var sankey = d3.sankey()
+    .nodeWidth(15)
+    .nodePadding(10)
+    .size([width, height]);
+
+var path = sankey.link();
+
+d3.json("docs/energy.json", function(energy) {
+
+  sankey
+      .nodes(energy.nodes)
+      .links(energy.links)
+      .layout(32);
+
+  var link = svg.append("g").selectAll(".link")
+      .data(energy.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-width", function(d) { return Math.max(1, d.dy); })
+      .sort(function(a, b) { return b.dy - a.dy; });
+
+  link.append("title")
+      .text(function(d) { return d.source.name + " → " + d.target.name + "\n" + format(d.value); });
+
+  var node = svg.append("g").selectAll(".node")
+      .data(energy.nodes)
+    .enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+    .call(d3.behavior.drag()
+      .origin(function(d) { return d; })
+      .on("dragstart", function() { this.parentNode.appendChild(this); })
+      .on("drag", dragmove));
+
+  node.append("rect")
+      .attr("height", function(d) { return d.dy; })
+      .attr("width", sankey.nodeWidth())
+      .style("fill", function(d) { return d.color = color(d.name.replace(/ .*/, "")); })
+      .style("stroke", function(d) { return d3.rgb(d.color).darker(2); })
+    .append("title")
+      .text(function(d) { return d.name + "\n" + format(d.value); });
+
+  node.append("text")
+      .attr("x", -6)
+      .attr("y", function(d) { return d.dy / 2; })
+      .attr("dy", ".35em")
+      .attr("text-anchor", "end")
+      .attr("transform", null)
+      .text(function(d) { return d.name; })
+    .filter(function(d) { return d.x < width / 2; })
+      .attr("x", 6 + sankey.nodeWidth())
+      .attr("text-anchor", "start");
+
+  function dragmove(d) {
+    d3.select(this).attr("transform", "translate(" + d.x + "," + (d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))) + ")");
+    sankey.relayout();
+    link.attr("d", path);
+  }
+});
+</script>
   </body>
 </html>
