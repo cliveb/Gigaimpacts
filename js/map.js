@@ -14,17 +14,19 @@
     "http:\/\/a.tiles.mapbox.com\/v3\/kamini.WA_totalemissions\/markers.geojsonp"
   ],
 
-/*
 
+/*
   "description": "Average annual household carbon footprint by Zip Code Tabulation Area",
   "download": "http:\/\/a.tiles.mapbox.com\/v3\/kamini.WA_totalemissions.mbtiles",
   "filesize": 168901632,
   "format": "png",
+*/
+
   "grids": [
     "http:\/\/a.tiles.mapbox.com\/v3\/kamini.WA_totalemissions\/{z}\/{x}\/{y}.grid.json",
     "http:\/\/b.tiles.mapbox.com\/v3\/kamini.WA_totalemissions\/{z}\/{x}\/{y}.grid.json"
   ],
-*/
+
 
 
   "id": "kamini.WA_totalemissions",
