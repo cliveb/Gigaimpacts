@@ -47,8 +47,12 @@
     "zoomwheel"
   ]
 };
+
+/*
   window.account = {
   "id": "kamini",
   "name": "CoolClimate Network",
   "avatar": "https:\/\/www.gravatar.com\/avatar\/de3b099b1452612f50070efc1edb89b9.jpg?d=mm"
-};  
+};
+
+*/  
