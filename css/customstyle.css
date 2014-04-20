@@ -21,8 +21,8 @@ Reference: view-source:http://bost.ocks.org/mike/sankey/
 
 .sankey-container {
     position: relative;
-    padding-bottom: 100%;
-    padding-top: 5px; height: 0; overflow: hidden;
+    padding-bottom: 20%;
+    padding-top: 0; height: 0; overflow: hidden;
 }
  
 #chart {
