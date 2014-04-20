@@ -31,7 +31,7 @@ Reference: view-source:http://bost.ocks.org/mike/sankey/
 }
 
 #map {
-  position:absolute; top:0; bottom:0; width:100%; height: 500px;
+  position:relative; top:0; bottom:0; width:100%; height: 500px;
 }
 
 .sankey-container {
