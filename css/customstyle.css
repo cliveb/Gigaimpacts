@@ -21,7 +21,7 @@ Reference: view-source:http://bost.ocks.org/mike/sankey/
 
 .sankey-container {
     position: relative;
-    padding-bottom: 20%;
+    padding-bottom: 60%;
     padding-top: 0; height: 0; overflow: hidden;
 }
  
