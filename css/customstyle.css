@@ -19,6 +19,12 @@
 Reference: view-source:http://bost.ocks.org/mike/sankey/
 */
 
+.sankey-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
 #chart {
   height: 500px;
 }
@@ -43,6 +49,7 @@ Reference: view-source:http://bost.ocks.org/mike/sankey/
 .link:hover {
   stroke-opacity: .5;
 }
+
 
 
 
