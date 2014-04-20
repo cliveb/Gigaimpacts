@@ -23,6 +23,17 @@
 Reference: view-source:http://bost.ocks.org/mike/sankey/
 */
 
+
+.mapbox-container {
+    position: relative;
+    padding-bottom: 60%;
+    padding-top: 20px; height: 500px; overflow: hidden; margin:0; padding:0;
+}
+
+#map {
+  position:absolute; top:0; bottom:0; width:100%; height: 500px;
+}
+
 .sankey-container {
     position: relative;
     padding-bottom: 60%;

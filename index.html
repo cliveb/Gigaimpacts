@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Giga Impacts Corp</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Giga Impacts Corp Dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="description" content="gigaimpacts">
     <meta name="author" content="github.com/cliveb">
+
+    
+    <meta name='twitter:site' content='@mapbox'>
+    <meta property='og:site_name' content='Mapbox' />
+    <meta name='twitter:url' content='http://a.tiles.mapbox.com/v3/kamini.WA_totalemissions/page.html' />
+    <meta property='og:url' content='http://a.tiles.mapbox.com/v3/kamini.WA_totalemissions/page.html'>
+    <meta name='twitter:title' content='Avg. Total Household Carbon Footprint' />
+    <meta property='og:title' content='Avg. Total Household Carbon Footprint' />
+    <meta name='twitter:description' content='Average annual household carbon footprint by Zip Code Tabulation Area' />
+    <meta property='og:description' content='Average annual household carbon footprint by Zip Code Tabulation Area' />
+    <meta name='twitter:image' content='http://a.tiles.mapbox.com/v3/kamini.WA_totalemissions/-97.1191,40.7805,5/435x375.png' />
+    <meta property='og:image' content='http://a.tiles.mapbox.com/v3/kamini.WA_totalemissions/-97.1191,40.7805,5/435x375.png' />
+    <meta name='twitter:image:width' content='435'>
+    <meta name='twitter:image:height' content='375'>
+    <meta property='og:image:width' content='435'>
+    <meta property='og:image:height' content='375'>
+    <meta name='twitter:card' content='summary_large_image'>
+    <meta property='og:type' content='website'> 
+    <base target='_parent' />
+   
+
+ <!--- HTML5 Conformance Checker. passed 4/16/2014
+================================================= -->
+<!-- <a href="http://goo.gl/OZS0Pi" target="_blank">HTML 5 Validator</a> -->
+
 
   <!-- Bootstrap
 ================================================== -->
     <!--<link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
     <link href="css/customstyle.css" rel="stylesheet" media="screen">
     <link rel="canonical" href="http://gigaimpacts.com/"/>
+    <!--<link rel='shortcut icon' href='https://www.mapbox.com/img/favicon.ico' type='image/x-icon' /> -->
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+
   </head>
 
   <!-- NavBar
@@ -30,6 +58,7 @@
             </button>
             <a class="navbar-brand" href="#">GIGA IMPACTS CORP</a>
           </div>
+ 
 
   <!-- Collect the nav links, forms, and other content for toggling
 ================================================== -->
@@ -105,6 +134,31 @@
         </div>
         <p></p>
 
+
+
+  <!-- Map Enery Use by Zip
+=================================================== -->  
+<div class="container">
+    <div class="row">
+        <hr>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <h4>Climate Change Navigator &trade; Map</h4>
+          <div class="mapbox-container">
+          <p id="map">
+              <script type="text/javascript" src="js/map.js"></script>
+            </div>
+        </div>
+      </div>
+  </div>
+  <p></p>
+
+
   <!-- Climate Change Navigator
 =================================================== -->        
 
@@ -118,8 +172,9 @@
     <div class="row">
         <div class="col-md-10 col-sm-6 col-xs-12">
           <div class="sankey-container">
-           <h4>Climate Change Navigator &trade;(POC)</h4>
-            <p id="chart"> 
+           <h4>Climate Change Navigator &trade; Energy</h4>
+            <p id="chart">
+                 <script type="text/javascript" src="js/sankey.js"></script> 
             </div>
             <div class="col-md-3 col-md-offset-9 col-sm-6 col-xs-12"> 
           <div class="infobar-module infobar-module-inset">Drag to rearrange nodes</div>
@@ -162,10 +217,6 @@
 </div>
 
 
-  <!--- HTML5 Conformance Checker. passed 4/16/2014
-================================================= -->
-<!-- <a href="http://goo.gl/OZS0Pi" target="_blank">HTML 5 Validator</a> -->
-
   <!-- Footer 
 ================================================== -->
       <footer>
@@ -201,14 +252,19 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-        
+ <!-- Necessary for mapbox 
+================================================== -->
+     <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+     <script src='https://www.mapbox.com/assets-api/share.js'></script>    
+
   <!-- Sankey necessary for chart 
 ================================================== -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js"></script>
     <script src="js/sankey.js"></script>
-<script>
 
+
+<script>
 var margin = {top: 1, right: 1, bottom: 6, left: 1},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
