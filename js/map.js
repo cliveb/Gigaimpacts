@@ -40,27 +40,19 @@
   ],
   "version": "1.0.0",
   "webpage": "http:\/\/a.tiles.mapbox.com\/v3\/kamini.WA_totalemissions\/page.html",
-  "options": [
+  
+
+  /*"options": [
     "geocoder",
     "share",
     "zoompan",
     "zoomwheel"
-  ]
+  ] 
+  */
 };
 
 
   window.account = {
-"bounds": [
-    -134.4726,
-    18.3128,
-    -56.7773,
-    55.0783
-  ],
-  "center": [
-    -97.1191,
-    40.7805,
-    5
-  ],  
   "id": "kamini",
   "name": "CoolClimate Network",
   "avatar": "https:\/\/www.gravatar.com\/avatar\/de3b099b1452612f50070efc1edb89b9.jpg?d=mm"
