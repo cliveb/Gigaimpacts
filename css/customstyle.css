@@ -27,7 +27,7 @@ Reference: view-source:http://bost.ocks.org/mike/sankey/
 .mapbox-container {
     position: relative;
     padding-bottom: 10%;
-    padding-top; height: 500px; overflow: hidden; margin:0; padding:0;
+    padding-top; height; overflow: hidden; margin:0; padding:0;
 }
 
 #map {
