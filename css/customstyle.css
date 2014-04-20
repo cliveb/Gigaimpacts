@@ -22,7 +22,7 @@ Reference: view-source:http://bost.ocks.org/mike/sankey/
 .sankey-container {
     position: relative;
     padding-bottom: 60%;
-    padding-top: 0; height: 0; overflow: hidden;
+    padding-top: 10; height: 0; overflow: hidden;
 }
  
 #chart {
