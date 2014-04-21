@@ -46,14 +46,13 @@
   "webpage": "http:\/\/a.tiles.mapbox.com\/v3\/kamini.WA_totalemissions\/page.html",
   
 
-  /*"options": [
+    "options": [
     "geocoder",
     "share",
     "zoompan",
     "zoomwheel"
   ] 
-  */
-};
+  
 
 
   window.account = {
