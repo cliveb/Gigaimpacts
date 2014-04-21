@@ -32,7 +32,7 @@
 
   "id": "kamini.WA_totalemissions",
   "legend": "",
-  "maxzoom": 4,
+  "maxzoom": 6,
   "minzoom": 2,
   "name": "Avg. Total Household Carbon Footprint",
   "private": true,
