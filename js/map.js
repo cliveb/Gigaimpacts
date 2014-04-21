@@ -10,10 +10,11 @@
     40.7805,
     5
   ],
+
+
   "data": [
     "https:\/\/a.tiles.mapbox.com\/v3\/kamini.WA_totalemissions\/markers.geojsonp"
   ],
-
 
 /*
   "description": "Average annual household carbon footprint by Zip Code Tabulation Area",
