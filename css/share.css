@@ -1,0 +1,196 @@
+#mapbox-logo {
+  position:absolute;
+  left:0;
+  top:0;
+  width: 40px;
+  height: 40px;
+  z-index:10;
+  }
+
+/* Overlay basics
+------------------------------------------------------- */
+#share-overlay {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  max-width: 400px;
+  z-index:10;
+  -webkit-transition:all .125s;
+          transition:all .125s;
+}
+
+#share-overlay .wrapper {
+  padding-left: 40px;
+  border-radius: 0 3px 3px 0;
+}
+
+#share-overlay .wrapper.hasdesc {
+  border-radius: 0 3px 0 0;
+}
+
+#share-overlay .wrapper.hasmarkers {
+  border-radius: 0;
+}
+
+.author .thumb {
+  height:20px;
+  width:20px;
+  background-size:100%;
+  background-position:50% 50%;
+  background-repeat:no-repeat;
+  }
+
+.author .account {
+  padding: 0 5px;
+  max-width: 120px;
+}
+
+.dropdown {
+  max-height:415px;
+  -webkit-transition:all .125s 0s, max-height 0 0;
+          transition:all .125s 0s, max-height 0 0;
+  }
+
+.compressed .dropdown {
+  -webkit-transition:all .125s 0s, max-height 0 .2s;
+          transition:all .125s 0s, max-height 0 .2s;
+  -webkit-transform:translateY(-40px);
+      -ms-transform:translateY(-40px);
+          transform:translateY(-40px);
+  opacity: 0;
+  max-height: 0;
+  }
+
+/* Compressed Overlay
+------------------------------------------------------- */
+#overlay-compressed {
+  height:40px;
+  z-index: 1;
+  }
+#overlay-compressed .wrapper {
+  z-index: 1;
+}
+
+/* Description
+------------------------------------------------------- */
+
+#desc-tray {
+  overflow: auto;
+  max-height: 135px;
+}
+
+#desc-tray img { margin-bottom: 10px;}
+
+/* Markers
+------------------------------------------------------- */
+#marker-toggle {
+  height:40px;
+  z-index:1;
+  right: auto;
+  left: 100%;
+  white-space: nowrap;
+  min-width: 60px;
+  }
+.compressed #marker-toggle {
+  background: #3887be;
+  }
+.compressed #marker-toggle:hover,
+#marker-toggle {
+  background:#3bb2d0;
+  color:#fff;
+  }
+#marker-tray {
+  max-height:280px;
+  overflow-y:auto;
+  }
+  #marker-tray:empty    { border-width: 0; }
+  #marker-tray a .icon  { margin-right: 5px; }
+  #marker-tray a {
+    cursor:pointer;
+    height:40px;
+    color:rgba(0,0,0,0.5);
+    }
+    #marker-tray a:hover {
+      background-color:#f8f8f8;
+      color:inherit;
+      }
+    #marker-tray a.active {
+      background-color:#ebebeb;
+      }
+    #marker-tray a:last-child {
+      border-bottom-width:0;
+      }
+
+/* Leaflet overrides
+------------------------------------------------------- */
+
+.leaflet-container {
+  background:#ddd url(../../img/canvas.png) repeat 0 0 !important;
+}
+
+.leaflet-container {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.leaflet-container
+.marker-description {
+  max-height: 240px;
+  overflow: auto;
+}
+
+.leaflet-container .marker-description {
+  min-width: 280px;
+}
+
+.leaflet-container .marker-description img {
+  max-width: 100% !important;
+  margin-bottom: 10px;
+}
+
+.leaflet-overlay-pane path,
+.leaflet-marker-icon {
+  cursor: pointer;
+}
+
+/* quick fix for missing leaflet img markers */
+.leaflet-marker-icon {
+  max-width: none;
+}
+
+/* Scrollbar
+------------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width:8px;
+  height:8px;
+  border-left:0;
+  background: rgba(0,0,0,.1);
+  }
+::-webkit-scrollbar-track {
+  background:none;
+  }
+::-webkit-scrollbar-thumb {
+  background:rgba(0,0,0,.1);
+  border-radius: 0;
+  }
+::-webkit-scrollbar:hover {
+  background:rgba(0,0,0,.15);
+  }
+
+/* Mobile
+------------------------------------------------------- */
+@media only screen and (max-width: 640px) {
+  #desc-tray,
+  #marker-tray {  max-height:120px; }
+  #marker-toggle  {
+    left: auto;
+    right: 0;
+    border-radius: 0;
+  }
+  #share-overlay {
+    max-width: none;
+    width: auto;
+    right: 10px;
+  }
+}

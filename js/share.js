@@ -2,12 +2,14 @@
 module.exports = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
-__p+='<link rel=\'shortcut icon\' href=\'/img/favicon.ico\' type=\'image/x-icon\' />\n<script src=\'//a.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js\'></script>\n<link href=\'//a.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css\' rel=\'stylesheet\' />\n<link href=\'//www.mapbox.com/base/latest/base.css\' rel=\'stylesheet\' />\n<link href=\''+
+__p+='<link rel=\'shortcut icon\' href=\'/img/favicon.ico\' type=\'image/x-icon\' />\n<script src=\'//a.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js\'>
+rel=\'stylesheet\' />\n<link href=\''+
 ((__t=( site ))==null?'':__t)+
 
 /*
-'/assets-api/share.css\' type=\'text/css\' rel=\'stylesheet\' />\n<style>\nhtml, body { height:100%; }\nbody { margin:0; padding:0; }\n.ts-map { height:100%; position:absolute; top:0; left:0; right:0; bottom:0; }\n</style>\n<div class=\'ts-map mm zoompan share zoomwheel geocoder zoombox attribution\' id=\'map\'></div>\n<div id=\'share-overlay\' class=\'round col5\'>\n<a id=\'mapbox-logo\' class=\'contain dark fill-darken1\' href=\'http://mapbox.com\'><span class=\'icon big mapbox\'></span></a>\n    <div id=\'overlay-compressed\' class=\'contain small animate\'>\n      <div id=\'overlay-wrapper\' class=\'mobile-cols wrapper contain dark fill-darken2 row1\'>\n        <div id=\'name\' class=\'pad1 col8 contain truncate strong\'>\n          '+
-/*
+__p+='<link rel=\'shortcut icon\' href=\'/img/favicon.ico\' type=\'image/x-icon\' />\n<script src=\'//a.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js\'></script>\n<link href=\'//a.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css\' rel=\'stylesheet\' />\n<link href=\'//www.mapbox.com/base/latest/base.css\' rel=\'stylesheet\' />\n<link href=\''+
+((__t=( site ))==null?'':__t)+
+*/
 
 
 /*
