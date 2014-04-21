@@ -53,7 +53,7 @@
     "zoomwheel"
   ] 
   
-
+};
 
   window.account = {
   "id": "kamini",
