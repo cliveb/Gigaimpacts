@@ -65,7 +65,7 @@ d3.sankey = function() {
            + "C" + x2 + "," + y0
            + " " + x3 + "," + y1
            + " " + x1 + "," + y1;
-    }
+    };
 
     link.curvature = function(_) {
       if (!arguments.length) return curvature;
