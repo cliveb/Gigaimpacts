@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Dev Giga Impacts Corp Dev</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--maximum-scale=1.0, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0--maximum-scale=1.0, user-scalable=no"> 
     <meta charset="utf-8">
    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="description" content="gigaimpacts">
@@ -190,9 +190,40 @@ https://googledrive.com/host/0B_xZB2IQRbXwVHVremhJUUhGOVk/css/customstyle.css --
                 <p id="map">
               <script type="text/javascript" src="js/map.js"></script> 
             </div>
+
+<div>
+<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+<div id='map'></div>
+
+<script type="text/javascript">
+    var map = L.mapbox.map('map', 'examples.map-vyofok3q', {
+        center: [38.9, -77.0],
+        zoom: 15
+    });
+    var hash = L.hash(map);
+</script>
+</div>
+
         </div>
       </div>
   </div>
+
+
+
+
+<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+<div id='map'></div>
+
+<script type="text/javascript">
+    var map = L.mapbox.map('map', 'examples.map-vyofok3q', {
+        center: [38.9, -77.0],
+        zoom: 15
+    });
+    var hash = L.hash(map);
+</script>
+
+
+
 
 
   <!-- Climate Change Navigator
