@@ -50,7 +50,7 @@
   "legend": "",
   "maxzoom": 7,
   "minzoom": 5,
-  "name": "Avg. Total Household Carbon Footprint",
+  "name": "Climate Change Navigator POC",
   "private": true,
   "scheme": "xyz",
   "template": "{{#__location__}}{{\/__location__}}{{#__teaser__}}\n<p\">Zipcode: {{{ZCTA5CE10}}}<\/p>\n<p\">{{{City}}}, {{{County}}} County, {{{State}}}<\/p>\n<br>\n<p\">{{{e_simple}}}<\/p>\n<p\">metric tons CO<sub>2<\/sub> equivalent<\/p>\n\n<img src=\"http:\/\/chart.googleapis.com\/chart?\n&chxl=0:|T|H|F|G|S\n&chxp=a\n&chxr=0,0,4|1,0,30\n&chxs=0,676767,11.5,0,lt,676767\n&chxt=x,y\n&chyl=Transportation|Housing|Food|Goods|Services\n&chbh=a\n&chs=275x225\n&cht=bvg\n&chco=0033FF|990099|FF0066|FF6600|FFCC00|9933FF\n&chds=0,30\n&chd=t:{{{transporta}}},{{{Housing}}},{{{food}}},{{{goods}}},{{{services}}}\n&chdl=Transportation|Housing|Food|Goods|Services\n&chdlp=b|l\n&chma=20,20,20,20|25,75\n&chts=676767,12\" width=\"220\" height=\"200\"\/>\n{{\/__teaser__}}{{#__full__}}{{\/__full__}}",
