@@ -1,6 +1,6 @@
 require.config({
   paths: {
-    d3: "http://d3js.org/d3.v3.min"
+    d3: "https://cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js"
   }
 });
 
