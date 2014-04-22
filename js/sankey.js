@@ -1,3 +1,4 @@
+/*
 require.config({
   paths: {
     d3: "https://cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js"
@@ -14,6 +15,7 @@ define("d3.global", ["d3"], function(_) {
 require(["d3"], function(d3) {
   console.log(d3.version);
 });
+*/
 
 d3.sankey = function() {
   var sankey = {},
