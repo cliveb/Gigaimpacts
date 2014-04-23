@@ -1,7 +1,7 @@
 /*
-Trying to solve ReferenceError: d3 is not defined -- in sankey.js after moving this d3 sankey code block from bootstrap html to js 
+Trying to solve ReferenceError: d3 is not defined -- in sankey.js after moving this d3 js sankey code block from bootstrap html to js 
 Per Mike Bostock's d3 help on github https://github.com/mbostock/d3/issues/1693#issuecomment-41127775
-I need to shim "d3" to make d3.global after D3 3.4.0 release for AMD API. Out of my depth, but trying... 
+I need to shim "d3" to make d3.global after D3 3.4.0 release for AMD API. Out of my depth, but trying 
 */
 
 require.config({
@@ -11,16 +11,23 @@ require.config({
 shim: {
     "d3": ["d3.global"]
   }
-window.d3 = _;});
+ç);
 
 define("d3.global", ["d3"], function(_) {
   d3 = _;
-window.d3 = _;  
-});
+window.d3 = _;});
 
 require(["d3"], function(d3) {
   console.log(d3.version);
 window.d3 = _;});
+
+/*
+
+After adding Window.d3 = _;} on the line per neverfox follow on comment on github -- error changes from ReferenceError: d3 is not defined to:
+SyntaxError: missing } after property list sankey.js:11
+TypeError: d3.sankey is not a function navigator.html:164
+
+*/
 
 
 d3.sankey = function() {
@@ -314,4 +321,6 @@ d3.sankey = function() {
   }
 
   return sankey;
+
+  window.d3 = _;}
 };
