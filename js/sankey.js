@@ -3,16 +3,15 @@ Trying to solve ReferenceError: d3 is not defined -- in sankey.js after moving t
 Per Mike Bostock's d3 help on github https://github.com/mbostock/d3/issues/1693#issuecomment-41127775
 I need to shim "d3" to make d3.global after D3 3.4.0 release for AMD API. Noob out of my depth, trying away: 
 */
-window.d3 = _;
-
-/* 
-
+ 
 /*
-
 After adding Window.d3 = _;} on the line per neverfox follow on comment on github -- error changes from ReferenceError: d3 is not defined to:
 SyntaxError: missing } after property list sankey.js:11
 TypeError: d3.sankey is not a function navigator.html:164
+*/
 
+/*
+http://www.slideshare.net/xMartin12/asynchronous-module-definition-amd
 */
 
 
