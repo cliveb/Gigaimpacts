@@ -307,4 +307,3 @@ d3.sankey = function() {
 
   return sankey;
 }; 
-}
