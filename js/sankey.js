@@ -20,6 +20,7 @@ window.d3 = _;});
 require(["d3"], function(d3) {
   console.log(d3.version);
 window.d3 = _;});
+}
 
 /*
 
@@ -322,5 +323,5 @@ d3.sankey = function() {
 
   return sankey;
 
-  window.d3 = _;}
+  window.d3 = _;}}
 };
