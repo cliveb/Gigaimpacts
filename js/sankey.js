@@ -4,6 +4,9 @@ Per Mike Bostock's d3 help on github https://github.com/mbostock/d3/issues/1693#
 I need to shim "d3" to make d3.global after D3 3.4.0 release for AMD API. Out of my depth, but trying 
 */
 
+
+/*
+
 require.config({
   paths: {
     d3: "https://cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js"
@@ -21,6 +24,8 @@ require(["d3"], function(d3) {
   console.log(d3.version);
 window.d3 = _;});
 }
+
+/* 
 
 /*
 
@@ -322,6 +327,4 @@ d3.sankey = function() {
   }
 
   return sankey;
-
-  window.d3 = _;}}
 };
