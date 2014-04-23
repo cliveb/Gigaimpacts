@@ -1,29 +1,9 @@
 /*
 Trying to solve ReferenceError: d3 is not defined -- in sankey.js after moving this d3 js sankey code block from bootstrap html to js 
 Per Mike Bostock's d3 help on github https://github.com/mbostock/d3/issues/1693#issuecomment-41127775
-I need to shim "d3" to make d3.global after D3 3.4.0 release for AMD API. Out of my depth, but trying 
+I need to shim "d3" to make d3.global after D3 3.4.0 release for AMD API. Noob out of my depth, trying away: 
 */
-
-
-/*
-
-require.config({
-  paths: {
-    d3: "https://cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js"
-  }
-shim: {
-    "d3": ["d3.global"]
-  }
-ç);
-
-define("d3.global", ["d3"], function(_) {
-  d3 = _;
-window.d3 = _;});
-
-require(["d3"], function(d3) {
-  console.log(d3.version);
-window.d3 = _;});
-}
+window.d3 = _;
 
 /* 
 
@@ -327,4 +307,5 @@ d3.sankey = function() {
   }
 
   return sankey;
-};
+}; 
+}
