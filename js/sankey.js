@@ -12,6 +12,7 @@ TypeError: d3.sankey is not a function navigator.html:164
 
 /*
 http://www.slideshare.net/xMartin12/asynchronous-module-definition-amd
+http://stackoverflow.com/questions/15269535/requirejs-d3-and-nvd3-integration
 */
 
 
