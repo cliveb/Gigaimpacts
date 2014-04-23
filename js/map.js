@@ -11,23 +11,6 @@
     6
   ],
 
-/*
-
- window.tilejson = {
-  "bounds": [
-    -134.4726,
-    18.3128,
-    -56.7773,
-    55.0783
-  ],
-  "center": [
-    -97.1191,
-    40.7805,
-    5
-  ],
-
-*/
-
   "data": [
     "https:\/\/a.tiles.mapbox.com\/v3\/kamini.WA_totalemissions\/markers.geojsonp"
   ],
